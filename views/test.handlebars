@@ -1,0 +1,47 @@
+<div>
+    <div class="page">
+        <div class="blog-box-comment">
+            <div class="header">
+                <div class="title">title example idk what</div>
+                <div class="date">posted my me on dd/mm/yyyy</div>
+            </div>
+            {{#if sameUser}}
+            <div class="text">
+
+                <textarea>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod quis similique commodi aliquid voluptatum sint? Non animi ad qui, fugiat sed, corporis nemo laudantium id explicabo architecto mollitia iste magni.</textarea>
+            </div>
+        </div>
+        <form id="update-form">
+            <button id="update-btn">Update</button>
+            <button id="delete-btn">Delete</button>
+        </form>
+        {{else}}
+        <div class="text">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod quis similique commodi aliquid
+                voluptatum
+                sint? Non animi ad qui, fugiat sed, corporis nemo laudantium id explicabo architecto mollitia iste
+                magni.</p>
+        </div>
+    </div>
+    <form id="comment form">
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        <button id="comment-btn">Comment</button>
+    </form>
+    {{/if}}
+    <br>
+    <div id="past-comments">
+        <div class="comments">
+            <p>some string of comments</p>
+            <p>-- NAme</p>
+        </div>
+        <div class="comments">
+            <p>some string of comments</p>
+            <p>-- NAme</p>
+        </div>
+        <div class="comments">
+            <p>some string of comments</p>
+            <p>-- NAme</p>
+        </div>
+    </div>
+</div>
+</div>
