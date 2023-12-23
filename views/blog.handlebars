@@ -1,0 +1,40 @@
+<div class="blog-box">
+    <a href="/blog/{{blog.id}}">
+        <div class="header">
+            <div class="title">{{blog.title}}</div>
+            <div class="date">By {{blog.user.firstName}} {{blog.user.lastName}} {{format_date blog.timeStamp}}</div>
+        </div>
+    </a>
+    {{#if sameUser}}
+    <div class="text">
+        <textarea id="update-blog">{{blog.body}}</textarea>
+    </div>
+    <form id="update-form">
+        <button id="update-btn">Update</button>
+        <button id="delete-btn">Delete</button>
+    </form>
+    {{else}}
+    <div class="text">
+        <p>{{blog.body}}</p>
+    </div>
+</div>
+<form id="comment-form">
+    <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+    <br>
+    <button id="comment-btn">Comment</button>
+</form>
+{{/if}}
+<br>
+<div id="past-comments">
+    {{#if comments}}
+    {{#each comments as |comment|}}
+    {{> listOfComments}}
+    {{/each}}
+    {{/if}}
+</div>
+<script>const id = {{ id }}; </script>
+{{#if sameUser}}
+<script src="../js/blog.js"></script>
+{{else}}
+<script src="../js/comments.js"></script>
+{{/if}}

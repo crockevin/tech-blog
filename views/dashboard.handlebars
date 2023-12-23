@@ -1,0 +1,16 @@
+<div>
+    <div id="newPost">
+        <button id="post-btn">New Post</button>
+    </div>
+    <form class="form hide-form">
+        <div class="blog-form">Title</div>
+        <textarea class="text" id="blog-title"></textarea>
+        <div class="blog-form">Body</div>
+        <textarea class="text" id="blog-body"></textarea>
+        <button id="update-btn">Post</button>
+    </form>
+    {{#each blogs as |blog|}}
+    {{> listOfBlogs}}
+    {{/each}}
+</div>
+<script src="../js/dashboard.js"></script>
